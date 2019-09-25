@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Kirby Clicker</title>
+</head>
+
+<body>
+    <img class="game-over" src="images/game-over.jpg" alt="game over">
+    <div class="gif-retry">
+        <img src="images/game-over.gif" alt="gif game over">
+        <button onclick="tryAgain()">Play Again</button>
+    </div>
+
+    <audio src="./sound/02 - Title.mp3" id="musicStart" loop="loop" autoplay="autoplay"></audio>
+    <audio src="./sound/kirbyClick.wav" id="kirbyClick"></audio>
+    <audio src="./sound/curtainFall.wav" id="end"></audio>
+    <audio src="./sound/Game_Over.mp3" id="gameOverMusic"></audio>
+    <audio src="./sound/miss.wav" id="miss"></audio>
+    <audio src="./sound/pointGain.wav" id="pointGain"></audio>
+    <audio src="./sound/10 - Vegetable Valley _Intro_.mp3" id="musicFire" loop="loop" autoplay="autoplay"></audio>
+    <audio src="./sound/04 - Ice Cream Island Map Screen.mp3" id="musicWater" loop="loop" autoplay="autoplay"></audio>
+    <audio src="./sound/08- Dream Fountain Scene.mp3" id="musicFrost" loop="loop" autoplay="autoplay"></audio>
+    <audio src="./sound/06_floatislands.mp3" id="musicRainbow" loop="loop" autoplay="autoplay"></audio>
+
+
+
+    <section class="main-container">
+            <div id="canvas-container">
+                    <div id="bigCanvas">
+                        <!-- side was 300x300 -->
+                        <canvas
+                            style="border-radius: 400px; position: absolute; left: 50%; transform: translate(-50%); z-index: 3"
+                            id="myCanvas1" width="200" height="200"></canvas>
+                        <canvas style=" position: absolute; left: -20%; top: 20%; z-index: 2;" id="myCanvas2"
+                            width="80" height="80"></canvas> <!-- left hand -->
+                        <canvas style=" position: absolute; left: 85%; top: 20%; z-index: 2;" id="myCanvas3"
+                            width="80" height="80"></canvas>
+                        <!--right hand  70*80 -->
+                        <canvas style=" position: absolute; left: 5%; top: 70%; z-index: 2;" id="myCanvas4"
+                            width="80" height="80"></canvas> <!-- left foot -->
+                        <canvas style=" position: absolute; left: 55%; top: 70%; z-index: 2;" id="myCanvas5"
+                            width="80" height="80"></canvas> <!-- right foot -->
+                    </div>
+                </div>
+
+                <div class="score"><p id="numbers">0</p><img src="images/star.png" alt="star"></div>
+
+                <div class="kirby-life">
+                <img class="hearth" src="images/hearth.gif_c200" alt="gif d'un coeur qui tourne">
+                <p class="game-life"></p>
+                </div>
+
+                <div class="score-container">
+                    <div class="best-score"><img src="images/best-score.gif"><p id="best-score">0</p></div>
+                    <div class="current-score"><img src="images/score.png"><p id="current-score">0</p></div>
+                </div>
+    </section>
+
+    <section class="bonus-container">
+        <ul>
+            <li>
+                <button id="chrono"></button>
+            </li>
+            <li>
+                <button class="button-fire disabled" onclick="fire()">
+                    <img src="images/flame.png"><div>BONUS x2</div>
+                    <div class="price">30<img src="images/star.png"></div>
+                </button>
+            </li>
+
+            <li>
+                <button class="button-water disabled" onclick="water()">
+                    <img src="images/water-drop.png"><div>BONUS x5</div>
+                    <div class="price">100<img src="images/star.png"></div>
+                </button>
+            </li>
+
+            <li>
+                <button class="button-frost disabled" onclick="frost()">
+                    <img src="images/snowflake.png"><div>BONUS x10</div>
+                    <div class="price">500<img src="images/star.png"></div>
+                </button>
+            </li>
+
+            <li>
+                <button class="button-rainbow disabled" onclick=rainbow()>
+                    <img src="images/rainbow.png"><div>BONUS x30</div>
+                    <div class="price">1000<img src="images/star.png"></div>
+                </button>
+            </li>
+
+            <li>
+                <button id="autoclick" onclick="autoclicker()"><img src="images/hammer.png">AutoClick<div class="price">200<img src="images/star.png"></div></button>
+            </li>
+            <li>
+                <button id="bonusclick" onclick="bonusclicker()"><img class="arrow" src="images/arrow-green.png">AutoClick lvl Up<div class="price">1000<img src="images/star.png"></div></button>
+            </li>
+
+            <li>
+                    <button id="buyLifeButton" onclick="buyLife()">
+                            <img src="images/hearth.gif_c200"><div>Life Pt. x1</div>
+                            <div class="price">1000<img src="images/star.png"></div>
+                    </button>
+            </li>
+        </ul>
+
+        <img src="images/kirby.png">
+        <p>DIE ♥</p>
+                
+            </section>
+
+
+        <script src='script.js'></script>
+</body>
+
+</html>
