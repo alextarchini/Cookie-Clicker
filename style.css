@@ -393,4 +393,6 @@ ul {
   height: 100%;
   width: 30px;
 }
-
+.bonus-container > img {
+  height: 20px;
+}
