@@ -386,21 +386,7 @@ ul {
 /* Responsive */
 @media only screen and (max-width: 600px) {
 .main-container {
-  height: 100%;
   width: calc(1000vw - 300px);
-  position: relative;
-  background-image: url("images/background-candy.jpg");
   background-size: 500% 100%;
-  background-repeat: no-repeat;
 }
 
-.bonus-container {
-  height: 100%;
-  width: 300px;
-  box-shadow: -2px 0 15px 5px rgba(10, 10, 10, 0.8);
-  user-select: none;
-  z-index: 1;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-  background-color: rgba(252, 142, 40, 0.884);
-  position: relative;
-}
