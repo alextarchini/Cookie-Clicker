@@ -381,3 +381,10 @@ ul {
   opacity:0;}
  
   }
+
+
+/* Responsive */
+@media only screen and (max-width: 600px) {
+  .quiz-container {
+
+  }
