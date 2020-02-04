@@ -387,7 +387,7 @@ ul {
 @media only screen and (max-width: 600px) {
 .main-container {
   height: 100%;
-  width: calc(100vw - 300px);
+  width: calc(1000vw - 300px);
   position: relative;
   background-image: url("images/background-candy.jpg");
   background-size: 500% 100%;
