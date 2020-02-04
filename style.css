@@ -389,4 +389,8 @@ ul {
   width: calc(1000vw - 300px);
   background-size: 500% 100%;
 }
+.bonus-container {
+  height: 10%;
+  width: 30px;
+}
 
